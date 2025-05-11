@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('asset 1.png') no-repeat center center/cover;
+    
+    background-attachment: fixed; 
+}
+.contact-container {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(0,0,0,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    animation: fadeInSlide 1.5s ease-out;
+}
+
+
+h2 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+p {
+    color: #ffffff;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #48494c7a;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #48494cd0;
+}
+
+.hidden {
+    display: none;
+}
+
+#successMessage {
+    margin-top: 15px;
+    color: #286628;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.contact-container {
+    animation: fadeInSlide 1.5s ease-out;
+}
