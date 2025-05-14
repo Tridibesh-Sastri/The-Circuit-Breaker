@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Circuit Breaker Electronics Club</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#111827',
+            highlight: '#00d8d6',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-black text-white">
+
+  <!-- Navbar -->
+  <header class="bg-brand text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      
+      <!-- Logo and Club Name -->
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="Logo" class="w-10 h-10">
+        <span class="text-lg font-bold">The Circuit Breaker Electronics Club</span>
+      </div>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="#" class="hover:text-highlight transition duration-300 ease-in-out">Home</a>
+        <a href="#projects" class="hover:text-highlight transition duration-300 ease-in-out">Projects</a>
+        <a href="#events" class="hover:text-highlight transition duration-300 ease-in-out">Events</a>
+        <a href="#members" class="hover:text-highlight transition duration-300 ease-in-out">Members</a>
+        <a href="#about" class="hover:text-highlight transition duration-300 ease-in-out">About Us</a>
+        <a href="#contact" class="block hover:text-highlight transition duration-300">Contact Us</a>
+    </div>
+        
+      </nav>
+
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden px-4 pb-4 hidden flex-col space-y-4 bg-brand transition-all duration-300 ease-in-out">
+      <a href="#" class="block hover:text-highlight transition duration-300">Home</a>
+      <a href="#projects" class="block hover:text-highlight transition duration-300">Projects</a>
+      <a href="#events" class="block hover:text-highlight transition duration-300">Events</a>
+      <a href="#members" class="block hover:text-highlight transition duration-300">Members</a>
+      <a href="#about" class="block hover:text-highlight transition duration-300">About Us</a>
+      <a href="#contact" class="block hover:text-highlight transition duration-300">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="p-12 text-center">
+    <h1 class="text-4xl font-bold text-highlight drop-shadow">Welcome to The Circuit Breaker Electronics Club</h1>
+    <p class="mt-4 text-gray-300">Explore projects, events, and resources to spark your curiosity!</p>
+  </div>
+
+ <!-- Projects Section -->
+<section id="projects" class="py-16 bg-gradient-to-b from-black via-gray-900 to-black text-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Projects</h2>
+    <p class="text-center text-gray-400 mb-12">Explore some of the innovative electronics projects created by our members.</p>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Project Card -->
+      <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+        <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2">Smart Home Automation</h3>
+          <p class="text-gray-400 text-sm">A low-cost system to control home appliances using a smartphone app.</p>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+        <img src="project2.jpg" alt="Project 2" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2">Line Following Robot</h3>
+          <p class="text-gray-400 text-sm">An autonomous robot designed to follow a black line path using IR sensors.</p>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+        <img src="project3.jpg" alt="Project 3" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-2">Weather Monitoring System</h3>
+          <p class="text-gray-400 text-sm">An IoT-based project that tracks temperature, humidity, and rainfall in real-time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Events Section -->
+<section id="events" class="py-16 bg-gradient-to-b from-black via-gray-900 to-black text-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Upcoming Events</h2>
+    <p class="text-center text-gray-400 mb-12">Join us for workshops, seminars, and competitions that spark innovation.</p>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Event Card -->
+      <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+        <img src="event1.jpg" alt="Event 1" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-1">Arduino Bootcamp</h3>
+          <p class="text-gray-400 text-sm mb-2">📅 May 15, 2025 | 🕒 10:00 AM - 4:00 PM</p>
+          <p class="text-gray-300 text-sm">A hands-on workshop introducing Arduino basics and real-world applications.</p>
+        </div>
+      </div>
+
+      <!-- Event Card -->
+      <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+        <img src="event2.jpg" alt="Event 2" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-1">Circuit Design Challenge</h3>
+          <p class="text-gray-400 text-sm mb-2">📅 June 5, 2025 | 🕒 1:00 PM - 6:00 PM</p>
+          <p class="text-gray-300 text-sm">Put your electronics skills to the test in a competitive circuit-building event.</p>
+        </div>
+      </div>
+
+      <!-- Event Card -->
+      <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300">
+        <img src="event3.jpg" alt="Event 3" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-semibold mb-1">Soldering & PCB Workshop</h3>
+          <p class="text-gray-400 text-sm mb-2">📅 June 20, 2025 | 🕒 11:00 AM - 3:00 PM</p>
+          <p class="text-gray-300 text-sm">Learn the fundamentals of soldering and designing custom printed circuit boards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Members Page -->
+<section id="members" class="py-16 bg-gradient-to-b from-black via-gray-900 to-black text-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Our Team</h2>
+    <p class="text-center text-gray-400 mb-12">Meet the core members powering The Circuit Breaker Electronics Club.</p>
+
+    <div class="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <!-- Member Card -->
+      <div class="bg-gray-800 rounded-xl text-center p-6 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1">
+        <img src="member1.jpg" alt="Member 1" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Aarav Mehta</h3>
+        <p class="text-gray-400 text-sm">President</p>
+      </div>
+
+      <!-- Member Card -->
+      <div class="bg-gray-800 rounded-xl text-center p-6 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1">
+        <img src="member2.jpg" alt="Member 2" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Diya Sharma</h3>
+        <p class="text-gray-400 text-sm">Vice President</p>
+      </div>
+
+      <!-- Member Card -->
+      <div class="bg-gray-800 rounded-xl text-center p-6 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1">
+        <img src="member3.jpg" alt="Member 3" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Rohan Patel</h3>
+        <p class="text-gray-400 text-sm">Project Lead</p>
+      </div>
+
+      <!-- Member Card -->
+      <div class="bg-gray-800 rounded-xl text-center p-6 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1">
+        <img src="member4.jpg" alt="Member 4" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+        <h3 class="text-xl font-semibold">Sneha Iyer</h3>
+        <p class="text-gray-400 text-sm">Event Coordinator</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us Page -->
+<section id="about" class="bg-gradient-to-b from-black via-gray-900 to-black text-white py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text Content -->
+      <div>
+        <h2 class="text-4xl font-bold mb-4">About The Circuit Breaker Electronics Club</h2>
+        <p class="text-gray-300 mb-6 leading-relaxed">
+          The Circuit Breaker Electronics Club is a passionate community of students driven by curiosity and innovation in electronics and embedded systems. We provide hands-on experience, organize impactful events, and foster peer-to-peer learning.
+        </p>
+        <p class="text-gray-400 mb-6">
+          Whether you're just beginning your electronics journey or you're an experienced tinkerer, our club is a place to experiment, collaborate, and create projects that make a difference.
+        </p>
+        <ul class="list-disc list-inside text-gray-300 space-y-2">
+          <li>Build real-world electronic projects</li>
+          <li>Host and participate in workshops and hackathons</li>
+          <li>Collaborate on research and innovation</li>
+          <li>Learn from industry experts and alumni</li>
+        </ul>
+      </div>
+
+      <!-- Optional Image -->
+      <div class="text-center">
+        <img src="electronics-club.jpg" alt="Electronics Club" class="rounded-xl shadow-lg w-full object-cover max-h-[400px]">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Us Page -->
+<section id="contact" class="bg-gradient-to-b from-black via-gray-900 to-black text-white py-16">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <h2 class="text-4xl font-bold text-center mb-8">Contact Us</h2>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+      <!-- Contact Form -->
+      <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+        <h3 class="text-2xl font-semibold mb-4">Send us a Message</h3>
+        <form action="#" method="POST" class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm text-gray-400">Name</label>
+            <input type="text" id="name" name="name" class="w-full p-3 bg-gray-700 rounded-md border-2 border-transparent focus:ring-2 focus:ring-teal-300 focus:border-transparent text-white placeholder-gray-400" placeholder="Your Name" required>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm text-gray-400">Email</label>
+            <input type="email" id="email" name="email" class="w-full p-3 bg-gray-700 rounded-md border-2 border-transparent focus:ring-2 focus:ring-teal-300 focus:border-transparent text-white placeholder-gray-400" placeholder="Your Email" required>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm text-gray-400">Message</label>
+            <textarea id="message" name="message" class="w-full p-3 bg-gray-700 rounded-md border-2 border-transparent focus:ring-2 focus:ring-teal-300 focus:border-transparent text-white placeholder-gray-400" placeholder="Your Message" rows="4" required></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="px-6 py-3 bg-teal-500 rounded-md text-white font-semibold hover:bg-teal-600 focus:ring-2 focus:ring-teal-300">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Contact Information -->
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
+        <ul class="space-y-4 text-gray-400">
+          <li class="flex items-center">
+            <i class="fas fa-map-marker-alt mr-3 text-teal-500"></i>
+            <span>123 Electronics Ave, Tech City, XYZ</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-phone-alt mr-3 text-teal-500"></i>
+            <span>+123 456 7890</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-envelope mr-3 text-teal-500"></i>
+            <span>contact@circuitbreakerclub.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="bg-brand text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+    
+    <!-- About -->
+    <div>
+      <h2 class="text-xl font-semibold mb-2 text-teal-400">About the Club</h2>
+      <p class="text-sm text-gray-300">
+        The Circuit Breaker Electronics Club is a hub for innovation and hands-on electronics learning. We host events, showcase projects, and provide resources to spark curiosity.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h2 class="text-xl font-semibold mb-2 text-teal-400">Quick Links</h2>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li><a href="#" class="hover:text-teal-400 transition">Home</a></li>
+        <li><a href="#projects" class="hover:text-teal-400 transition">Projects</a></li>
+        <li><a href="#events" class="hover:text-teal-400 transition">Events</a></li>
+        <li><a href="#contact" class="hover:text-teal-400 transition">Contact Us</a></li>
+        <li><a href="#members" class="hover:text-teal-400 transition">Members</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h2 class="text-xl font-semibold mb-2 text-teal-400">Contact Us</h2>
+      <p class="text-sm text-gray-300">Email: <a href="mailto:circuitbreaker@club.com" class="hover:text-teal-400">circuitbreaker@club.com</a></p>
+      <p class="text-sm text-gray-300 mt-2">Follow us:</p>
+      <div class="flex space-x-4 mt-2">
+        <a href="#" class="hover:text-teal-400 transition">Instagram</a>
+        <a href="#" class="hover:text-teal-400 transition">LinkedIn</a>
+        <a href="#" class="hover:text-teal-400 transition">GitHub</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="border-t border-gray-600 mt-6">
+    <p class="text-center py-4 text-sm text-gray-400">
+      © 2025 The Circuit Breaker Electronics Club. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+
+
+
+
+
+  <!-- JS for Mobile Toggle -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
