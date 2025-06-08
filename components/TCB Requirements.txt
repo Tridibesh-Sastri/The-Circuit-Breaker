@@ -1,0 +1,23 @@
+1. Basic Equipment (Lab Essentials)
+
+Breadboards (large & medium)
+
+Soldering station (soldering iron, stand, desoldering pump)
+
+Multimeters (digital/analog)
+
+Oscilloscope (if budget allows, at least 1 unit)
+
+Function generator (basic audio frequency type is enough)
+
+Power supply (adjustable bench power supply, 0-30V)
+
+Wire strippers, cutters, nose pliers, tweezers
+
+Jumper wires (male-male, male-female)
+
+Heat shrink tubing and heat gun
+
+Hot glue gun
+
+USB testers and voltmeters
